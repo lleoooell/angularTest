@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<body>
+		<div ng-app="myApp" >
+			<div ng-controller="myCtrl">
+				{{ firstName + " " + lastName }}
+			</div>
+			<div ng-controller="myCtrl2">
+				{{ hello }}
+				
+			</div>
+		</div>
+		<script src="./app/myApp.js"></script>
+		<script src="./app/controller/myCtrl.js"></script>
+		<script src="./app/controller/myCtrl2.js"></script>
+	</body>
+</html>
