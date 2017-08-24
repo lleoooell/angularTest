@@ -5,16 +5,20 @@
 		<div ng-app="myApp" >
 			<div ng-controller="myCtrl">
 				{{ firstName + " " + lastName }}
+				<!-- <my-first-dir></my-first-dir> -->
+				<div data-my-first-dir></div>
+				<!-- <div class="my-first-dir"></div> -->
 			</div>
 			<div ng-controller="myCtrl2">
 				<ul>
 					<li ng-repeat="person in monTableau">{{person.nom}}</li>
 				</ul>
-				
+				<my-first-dir></my-first-dir>
 			</div>
 		</div>
 		<script src="./app/myApp.js"></script>
 		<script src="./app/controller/myCtrl.js"></script>
 		<script src="./app/controller/myCtrl2.js"></script>
+		<script src="./app/directive/myDir.js"></script>
 	</body>
 </html>
