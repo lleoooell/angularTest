@@ -3,17 +3,28 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<body>
 		<div ng-app="myApp" >
+			ctrl1
 			<div ng-controller="myCtrl">
-				{{ firstName + " " + lastName }}
+				<form name="myForm">
+					<input type="text" ng-model="person.prenom" ><br>
+					<input type="text" ng-model="person.nom" ><br>
+					<input type="email" ng-model="person.email" ><br>
+					
+					<!-- <button type="submit"></button> -->
+				</form>
+				<button ng-click="submitForm()">valider</button>
+				<!-- {{ person.firstName + " " + person.lastName }}<br> -->
+				{{person}}
+			</div>
+			<hr>
+			ctrl2
+			<div ng-controller="myCtrl2">
+				<ul>
+					<li ng-repeat="person in monTableau">{{person.nom + " " + person.prenom}}</li>
+				</ul>
 				<!-- <my-first-dir></my-first-dir> -->
 				<div data-my-first-dir></div>
 				<!-- <div class="my-first-dir"></div> -->
-			</div>
-			<div ng-controller="myCtrl2">
-				<ul>
-					<li ng-repeat="person in monTableau">{{person.nom}}</li>
-				</ul>
-				<my-first-dir></my-first-dir>
 			</div>
 		</div>
 		<script src="./app/myApp.js"></script>
