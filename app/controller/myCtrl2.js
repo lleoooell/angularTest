@@ -1,3 +1,3 @@
 app.controller("myCtrl2", function($scope) {
-    $scope.hello = "hello from Ctrl 2";
+    $scope.monTableau = [{nom : "casagrande", prenom:"leo"},{nom : "vador", prenom:"dark"}];
 });
