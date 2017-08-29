@@ -1,5 +1,7 @@
-app.controller("myCtrl2", function($scope, $http,maliste) {
+app.controller("myCtrl2", function($scope, $http,liste) {
     // $scope.monTableau = [{nom : "casagrande", prenom:"leo"},{nom : "vador", prenom:"dark"}];
-    $scope.maliste = maliste;
+    $scope.maliste = liste;
+    console.log(liste);
+    console.log($scope.maliste);
 
 });

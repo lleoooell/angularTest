@@ -13,8 +13,18 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: 'app/views/vue2.html',
                 controller: "myCtrl2",
                 resolve: {
-                    maliste: function(eleveFactory) {
-                        return eleveFactory.query();
+                    liste : function(eleveFactory){
+                        // var promise = $q.defer();
+
+                        // eleveFactory.query().$promise.then(function(data){
+                        //     console.log(data);
+                        //     promise.resolve(data);
+                        // });
+                        // return promise.promise
+
+                        return eleveFactory.query()
+
+
                     }
                 }
             })
@@ -28,8 +38,3 @@ app.config(['$routeProvider', '$locationProvider',
             });
     }
 ]);
-
-app.config(['$resourceProvider', function($resourceProvider) {
-    // Don't strip trailing slashes from calculated URLs
-    $resourceProvider.defaults.stripTrailingSlashes = false;
-}]);

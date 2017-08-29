@@ -1,4 +1,4 @@
-app.controller("profil.ctrl", function($scope,$routeParams, $http, eleveFactory){
+app.controller("profil.ctrl",['$scope','$routeParams', '$http', 'eleveFactory', function($scope,$routeParams, $http, eleveFactory){
 	$scope.test = "hello";
 	console.log($routeParams);
 
@@ -14,4 +14,4 @@ app.controller("profil.ctrl", function($scope,$routeParams, $http, eleveFactory)
 
 	// });
 
-});
+}]);
