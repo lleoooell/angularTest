@@ -7,6 +7,7 @@ app.controller("myCtrl", function($scope, $rootScope) {
         prenom: "dark"
     }];
     // $scope.person = {};
+
     $scope.submitForm = function() {
         $rootScope.monTableau.push($scope.person);
         $scope.person = {};
