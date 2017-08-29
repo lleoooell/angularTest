@@ -13,6 +13,10 @@ app.config(['$routeProvider','$locationProvider',
         	templateUrl : 'app/views/vue2.html',
         	controller : "myCtrl2"
         })
+        .when("/eleve/:id",{
+        	templateUrl : 'app/views/profil.html',
+        	controller : "profil.ctrl"
+        })
         .otherwise({
             redirectTo: '/',
 

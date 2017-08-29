@@ -1,7 +1,12 @@
 <div ng-controller="myCtrl2">
+				<!-- {{maListe}} -->
+
 				<ul>
-					<li ng-repeat="person in monTableau">{{person.nom + " " + person.prenom}}</li>
+					<li ng-repeat="n in maListe"><a ng-href="#!/eleve/{{n._id}}">{{n.nom}}&nbsp;{{n.prenom}}</a></li>
 				</ul>
+				<!-- <ul>
+					<li ng-repeat="person in monTableau">{{person.nom + " " + person.prenom}}</li>
+				</ul> -->
 				<!-- <my-first-dir></my-first-dir> -->
 				<div data-my-first-dir></div>
 				<!-- <div class="my-first-dir"></div> -->
