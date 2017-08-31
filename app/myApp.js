@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ['ngRoute', 'ngResource']);
+var app = angular.module("myApp", ['ngRoute', 'ngResource','ngLodash']);
 
 app.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
@@ -22,7 +22,7 @@ app.config(['$routeProvider', '$locationProvider',
                         // });
                         // return promise.promise
 
-                        return eleveFactory.query()
+                        return eleveFactory.query();
 
 
                     }
@@ -30,7 +30,13 @@ app.config(['$routeProvider', '$locationProvider',
             })
             .when("/eleve/:id", {
                 templateUrl: 'app/views/profil.html',
-                controller: "profil.ctrl"
+                controller: "profil.ctrl",
+                resolve:{
+                    monProfil : function(eleveFactory, $route){
+                        console.log($route);
+                        return eleveFactory.get({userId : $route.current.params.id});
+                    }
+                }
             })
             .otherwise({
                 redirectTo: '/',

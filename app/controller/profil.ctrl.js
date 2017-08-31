@@ -1,8 +1,8 @@
-app.controller("profil.ctrl",['$scope','$routeParams', '$http', 'eleveFactory', function($scope,$routeParams, $http, eleveFactory){
+app.controller("profil.ctrl",['$scope','monProfil', function($scope, monProfil){
 	$scope.test = "hello";
-	console.log($routeParams);
+	console.log(monProfil);
 
-	$scope.monProfil = eleveFactory.get({userId : $routeParams.id});
+	$scope.monProfil = monProfil;
 	// $http({
 	// 	method : 'GET',
 	// 	url : 'http://localhost:3000/api/liste/' + $routeParams.id

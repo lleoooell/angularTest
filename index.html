@@ -3,6 +3,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	<script src="./app/lib/lodash.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
 	<!-- <base href="/"> -->
 	<body>
 		<div ng-app="myApp" >
@@ -15,9 +19,17 @@
 		</div>
 		<script src="./app/myApp.js"></script>
 		<script src="./app/service/eleveService.js"></script>
+		<script src="./app/service/socket.js"></script>
 		<script src="./app/controller/myCtrl2.js"></script>
 		<script src="./app/controller/myCtrl.js"></script>
 		<script src="./app/controller/profil.ctrl.js"></script>
 		<script src="./app/directive/myDir.js"></script>
+		<script type="text/javascript">
+			    var socket = io.connect('http://localhost:3000');
+                socket.on("monsocket",function(socket){
+                    console.log(socket);
+   				 });
+                
+		</script>
 	</body>
 </html>

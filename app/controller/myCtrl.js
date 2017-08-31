@@ -12,6 +12,7 @@ app.controller("myCtrl", function($scope, $rootScope) {
         $rootScope.monTableau.push($scope.person);
         $scope.person = {};
     };
+   
     // Simple GET request example:
     // $http({
     //     method: 'GET',
