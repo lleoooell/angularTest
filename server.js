@@ -31,6 +31,7 @@ promise.then(
 // ecouter les evenements
 io.sockets.on('connection', function (socket) {
     console.log("un client est connecté");
+    // console.log(socket);
 
     socket.emit('monsocket', { hello: "world" });
   // socket.on('vote', function(msg){
